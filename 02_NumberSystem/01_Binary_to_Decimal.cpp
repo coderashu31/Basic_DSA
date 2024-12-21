@@ -34,7 +34,11 @@
 
 // method 2:
 // normal method
+<<<<<<< HEAD
 #include<bits/stdc++.h>
+=======
+#include <iostream>
+>>>>>>> 25f405b (updated Bin to dec)
 using namespace std;
 
 int main() {
