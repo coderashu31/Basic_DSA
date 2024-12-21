@@ -17,14 +17,27 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// method 1: find the min and return. 
+//method 1: find the min and return. 
+//tc:  O(n log n) 
+
 // int findSmallestElement(vector<int> &arr){
 //     sort(arr.begin(),arr.end());
 //     return arr[0];
 // }
 
 
+// Optimised method 2: 
+// tc: O(1)
+int findSmallestElement(vector<int> &arr){
+    int mini = arr[0];
 
+    for(int i=1;i<arr.size();i++){
+        if(arr[i]<mini){
+            mini = arr[i];
+        }
+    }
+    return mini;
+}
 
 int main(){
     int n;
