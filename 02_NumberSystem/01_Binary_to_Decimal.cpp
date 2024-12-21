@@ -11,6 +11,8 @@
 
 
 // method 1:
+// Using predefined functions.
+
 #include<bits/stdc++.h>
 using namespace std;
 int main() {
