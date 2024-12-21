@@ -31,3 +31,4 @@ int main(){
     reverse(s.begin(),s.end());
     cout<<s;
 }
+//
