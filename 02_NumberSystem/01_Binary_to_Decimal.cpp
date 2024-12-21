@@ -13,12 +13,12 @@
 // method 1:
 // Using predefined functions.
 
-#include<bits/stdc++.h>
-using namespace std;
-int main() {
-	string s = "1011";
-	cout << stoi(s, 0, 2);
-}
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main() {
+// 	string s = "1011";
+// 	cout << stoi(s, 0, 2);
+// }
 
 // Time Complexity: O(N).
 // Space Complexity: O(1).
@@ -32,4 +32,26 @@ int main() {
 // base (optional): The numerical base (e.g., 10 for decimal, 16 for hexadecimal). Default is 10.
 
 
-method 2:
+// method 2:
+// normal method
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s;
+    cin >> s; 
+    int n = s.length();
+
+    int base = 1;  
+    int ans = 0;  
+
+    for (int i = n - 1; i >= 0; i--) { 
+        if (s[i] == '1') {
+            ans += base; 
+        }
+        base *= 2; 
+    }
+
+    cout << "Decimal equivalent: " << ans << endl;
+    return 0;
+}
