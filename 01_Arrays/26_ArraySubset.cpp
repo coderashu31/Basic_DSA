@@ -19,8 +19,73 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+//method 0:
+// using simple NESTED for loops
+bool issubset(vector<int> &arr1, vector<int> &arr2) {
+    for (int i = 0; i < arr1.size(); i++) {
+        bool found = false;
+        for (int j = 0; j < arr2.size(); j++) {
+            if (arr1[i] == arr2[j]) {
+                found = true;
+                break;  
+            }
+        }
+
+        if (!found) {
+            return false;
+        }
+    }
+    return true;
+}
+
 /*
+// method 1:
+//using Binary Search
+// O(nlogn+mlogn)
+
+// O(mlogn)
+bool binarySearch(const vector<int> &arr, int key) {
+    int left = 0, right = arr.size() - 1;
+    
+    while (left <= right) {  
+        int mid = left + (right - left) / 2;
+
+        if (arr[mid] == key) {
+            return true;  
+        }
+        else if (arr[mid] < key) {
+            left = mid + 1;  
+        } else {
+            right = mid - 1;  
+        }
+    }
+    return false;  
+}
+
+bool issubset(vector<int> &arr1, vector<int> &arr2){
+    vector<int> sorted_arr2 = arr2;
+    // O(nlogn)
+    sort(sorted_arr2.begin(),sorted_arr2.end());
+
+    for(int x:arr1){
+        if(!binarySearch(sorted_arr2,x)){
+            return false;
+        }
+    }
+    return true;
+}
+*/
+
+
+
+/*
+method 2:
 optimised method: 
+// TC:  O(n)+O(m)=O(n+m)
+// Constructing the unordered set: O(n)
+// Searching for each element of arr1: O(m)
+
 bool issubset(vector<int> &arr1 , vector<int> &arr2){
 
     //store elements of arr2 because searching in an unordered set is O(1) on average.
@@ -37,8 +102,6 @@ bool issubset(vector<int> &arr1 , vector<int> &arr2){
     return true;
 }
 */
-
-bool issubset()
 
 
 int main(){
