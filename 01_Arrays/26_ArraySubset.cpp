@@ -19,9 +19,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+optimised method: 
 bool issubset(vector<int> &arr1 , vector<int> &arr2){
+
+    //store elements of arr2 because searching in an unordered set is O(1) on average.
     unordered_set<int> s(arr2.begin(),arr2.end());
 
+
+    //checking if the element exist in the set
     for(int x: arr1){
         if(s.find(x) == s.end()){
             return false;
@@ -30,6 +36,10 @@ bool issubset(vector<int> &arr1 , vector<int> &arr2){
 
     return true;
 }
+*/
+
+bool issubset()
+
 
 int main(){
     vector<int> arr1 = {1,3,4,5,2};
