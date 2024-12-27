@@ -16,3 +16,31 @@
 // Output: arr1[] is not a subset of arr2[]
 
 
+#include<bits/stdc++.h>
+using namespace std;
+
+bool issubset(vector<int> &arr1 , vector<int> &arr2){
+    unordered_set<int> s(arr2.begin(),arr2.end());
+
+    for(int x: arr1){
+        if(s.find(x) == s.end()){
+            return false;
+        }
+    }
+
+    return true;
+}
+
+int main(){
+    vector<int> arr1 = {1,3,4,5,2};
+    vector<int> arr2 = {2,4,3,1,7,5,15};
+
+    bool ans = issubset(arr1,arr2);
+    if (ans == true){
+        cout<<"arr1 is subset of arr2";
+    }
+    else cout<<"arr1 is not a subset of arr2";
+    
+    return 0;
+}
+
