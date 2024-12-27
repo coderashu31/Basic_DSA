@@ -34,11 +34,15 @@
 
 // method 2:
 // normal method
+<<<<<<< HEAD:02_NumberSystem/01_Binary_to_Decimal.cpp
 <<<<<<< HEAD
 #include<bits/stdc++.h>
 =======
 #include <iostream>
 >>>>>>> 25f405b (updated Bin to dec)
+=======
+#include<bits/stdc++.h>
+>>>>>>> e236077 (Changing the folder structure):02_NumberSystem/02_NumberSystem/01_Binary_to_Decimal.cpp
 using namespace std;
 
 int main() {
