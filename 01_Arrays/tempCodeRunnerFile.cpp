@@ -1,39 +1,19 @@
-// find the largest element in the array.
-// Example 1:
-// Input:
-//  arr[] = {2,5,1,3,0};
-// Output:
-//  5
-// Explanation:
-//  5 is the largest element in the array. 
+int findIndex(vector<int> arr, int key){
+    // Sort the array O(nlog n)
+    sort(arr.begin(), arr.end());
 
-// Example2:
-// Input:
-//  arr[] = {8,10,5,7,9};
-// Output:
-//  10
-// Explanation:
-//  10 is the largest element in the array.
+    // Binary Search: O(log n)
+    int left = 0, right = arr.size() - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
 
-#include<bits/stdc++.h>
-using namespace std;
-
-int findlargestelem(vector<int> &arr){
-    sort(arr.begin(),arr.end());
-    return arr[n-1];
-}
-
-int main(){
-    int n;
-    cin>>n;
-
-    vector<int> arr(n);
-    cout<<"Enter the array elements: ";
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
+        if (arr[mid] == key) {
+            return mid;  
+        } else if (arr[mid] < key) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
     }
-
-    int largest_elem = findlargestelem(arr);
-
-    cout<<"The largest element is :"<<largest_elem<<endl;
+    return -1;
 }
