@@ -20,29 +20,49 @@
 #include <vector>
 using namespace std;
 
+void rotate_toleft(vector<int> &arr, int k){
+    int n = arr.size();
+    k = k % n;
+    int temp[k];
+
+    if(n == 0){
+        return;
+    }
+
+    if (k > n){
+        return;
+    }
+
+    for(int i = 0; i < k ;i++ ){
+        temp[i] = arr[i];
+    }
+
+    for(int i = 0; i< n-k ; i++ ){
+        arr[i] = arr[i+k];
+    }
+    for (int i = n-k; i< n; i++){
+        arr[i] = temp[i - n + k];
+    }
+}
+
 void rotate_toright(vector<int> &arr, int k) {
     int n = arr.size();
-    k = k % n; // Handle cases where k >= n
+    k = k % n; 
 
     vector<int> temp(n);
-
-    // Copy the last k elements of arr into the first k positions of temp
+    
     for (int i = 0; i < k; i++) {
         temp[i] = arr[n - k + i];
     }
-
-    // Copy the first (n - k) elements of arr into temp
     for (int i = k; i < n; i++) {
         temp[i] = arr[i - k];
     }
-
-    // Update the original array with the rotated values
     arr = temp;
 }
 
 int main() {
     vector<int> arr = {3, 7, 8, 9, 10, 11};
-    int k = 2;
+    int k = 8;
 
     rotate_toright(arr, k);
 
