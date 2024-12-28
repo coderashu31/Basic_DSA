@@ -42,8 +42,7 @@ void rotate_toright(vector<int> &arr, int k) {
 
 int main() {
     vector<int> arr = {3, 7, 8, 9, 10, 11};
-    int k;
-    cin >> k;
+    int k = 2;
 
     rotate_toright(arr, k);
 
