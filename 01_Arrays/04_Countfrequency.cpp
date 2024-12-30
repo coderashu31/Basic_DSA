@@ -39,6 +39,10 @@ void countFreq(int arr[],int n){
 */
 
 
+// TC:
+// O(n)+O(n) = O(n) 
+
+
 void countFreq(int arr[], int n) {
     unordered_map<int, int> map; 
     vector<int> order;          
