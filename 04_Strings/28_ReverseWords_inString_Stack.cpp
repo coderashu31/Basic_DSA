@@ -9,6 +9,7 @@
 // Output: “decent is This”
 
 // Can be done using Stack
+/*
 // Brute force:
 #include<bits/stdc++.h> 
 using namespace std;
@@ -54,3 +55,58 @@ int main() {
 
     return 0;
 }
+*/
+
+//Optimised method:
+#include<bits/stdc++.h> // Includes all standard library headers
+using namespace std;
+
+// Function to reverse words in a string
+string result(string s) {
+    int left = 0;  // Pointer to the start of the string
+    int right = s.length() - 1;  // Pointer to the end of the string
+    
+    string temp = "";  // Temporary variable to hold the current word
+    string ans = "";   // Final result to store reversed words
+    
+    // Iterate through the string to reverse the order of words
+    while (left <= right) {
+        char ch = s[left];  // Get the current character
+        
+        if (ch != ' ') {  // If the character is not a space, add it to the current word
+            temp += ch;
+        } else if (ch == ' ') {  // If a space is encountered, process the current word
+            if (ans != "") 
+                ans = temp + " " + ans;  // Add the word to the beginning of the result
+            else 
+                ans = temp;  // Initialize the result if it's the first word
+            temp = "";  // Reset the temporary variable for the next word
+        }
+        left++;  // Move to the next character
+    }
+    
+    // Handle the last word if any
+    if (temp != "") {
+        if (ans != "") 
+            ans = temp + " " + ans;  // Add the last word to the beginning
+        else 
+            ans = temp;  // Initialize the result if it's the only word
+    }
+    
+    return ans;  // Return the reversed string
+}
+
+int main() {
+    string st = "TUF is great for interview preparation";
+    
+    // Print the original string
+    cout << "Before reversing words: " << endl;
+    cout << st << endl;
+    
+    // Print the reversed string
+    cout << "After reversing words: " << endl;
+    cout << result(st);
+    
+    return 0;
+}
+
