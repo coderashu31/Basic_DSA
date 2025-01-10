@@ -23,8 +23,8 @@ void factorsofnum(int num){
 
 int main(){
     int num = 6;
-
-    cout<< num << " is divisible by : " ;factorsofnum(num); 
+    cout<< num << " is divisible by : " ;
+    factorsofnum(num); 
     cout<< endl;
     return 0;
 }

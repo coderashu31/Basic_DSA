@@ -16,3 +16,26 @@
 // Reason:
 // For 6 and 28 , the sum of their proper divisors (1+2+3) and (1+4+7+14) is equal to the respective numbers and for 15 it is not.
 
+#include<bits/stdc++.h>
+using namespace std;
+
+bool perfect_num(int num){
+    int sum = 0;
+    for(int i=1; i<num ; i++){
+        if(num % i == 0){
+            sum += i;
+        }   
+    }
+    return sum == num;
+}
+
+int main(){
+    int num = 28;
+    
+    if (perfect_num(num)){
+        cout<< num << " is a perfect number." << endl;
+    } else {
+        cout << num << " is not a perfect number." << endl;
+    }
+    return 0;
+}
