@@ -26,7 +26,11 @@ bool perfect_num(int num){
             sum += i;
         }   
     }
-    return sum == num;
+    // return sum == num;
+    if (sum == num)
+        return true;
+    else 
+        return false;
 }
 
 int main(){
