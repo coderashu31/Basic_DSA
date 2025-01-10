@@ -11,35 +11,40 @@
 // Explanation: 11, 22, 33, 44 will remain the same when they read from forward or backward.
 
 
-#include<bits/stdc++>
+#include<bits/stdc++.h>
 using namespace std;
 
-bool find_palinrange(int n){
-    // find reverse_no
-    int reverse = 0;
-    int temp = n
-    while (/* condition */)
-    {
-        /* code */
+bool ispalindrome(int n){
+    int temp = n;
+    int rev = 0;
+    while (temp > 0){
+        rev = rev*10 + temp%10;
+        temp /= 10;
     }
-    
-    // if reverse_no and the original number are same 
-    // number is palindrome
 
-
+    if (n == rev){
+        return true;
+    } else { 
+        return false;
+    }
 }
 
 int main(){
-    int min , max ;
-    cin >> min;
-    cin >> max;
+    int min = 10;
+    int max = 50;
 
+    bool found = false;
     for(int i = min ; i <= max ; i++){
-        if (ispalindrome){
+        if (ispalindrome(i)){
             cout<< i << " ";
-        } else {
-            cout<< "Not a palindrome ";
-        }
+            found = true;
+        } 
     }
+
+    if(!found){
+        cout<< "Not a palindrome number ";
+    }
+
+    return 0;
 }
 
