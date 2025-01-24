@@ -1,17 +1,12 @@
-string reverseSentence(string s) {
-//     string result;
-//     int i = 0;
-//     int n = s.length();
-
-//     while (i < n) {
-//         while (i < n && s[i] == ' ') i++;
-//         if (i >= n) break;
-//         int j = i + 1;
-//         while (j < n && s[j] != ' ') j++;
-//         string sub = s.substr(i, j - i);
-//         if (result.empty()) result = sub;
-//         else result = sub + " " + result;
-//         i = j + 1;
+void caseconv(string &str, int n){
+//     for(int i=0 ;i<n ; i++){
+//         int ascii = (int)str[i];
+//         if(ascii >= 65 && ascii <=90){
+//             str[i] = (char)(ascii + 32);
+//         } else if (ascii >= 97 && ascii <=122){
+//             str[i] = (char)(ascii - 32);
+//         }
 //     }
-//     return result;
+//     cout << "Resultant string: " << "\n";
+//     cout << str << "\n";
 // }
