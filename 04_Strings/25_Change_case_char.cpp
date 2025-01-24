@@ -28,6 +28,8 @@ using namespace std;
 // }
 
 
+
+// using inbuilt function tolower, toupper
 void caseconv(string &str, int n){
  for (int i = 0; i < n; i++) {
     int ascii = (int) str[i];
