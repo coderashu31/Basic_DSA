@@ -16,13 +16,7 @@
 using namespace std;
 
 double findavg(vector<int> &arr){
-    int n = arr.size();
-    double sum = 0;
-    for(int i = 0; i < n; i++){
-        sum += arr[i];
-    }
-    double avg = sum / n;
-    return avg;
+
 }
 
 int main(){
