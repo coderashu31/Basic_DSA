@@ -1,9 +1,10 @@
 // Reverse a String
-// Solution 1: Using Stack
 
 #include<bits/stdc++.h>
 using namespace std;
 
+// Solution 1: Using Stack
+/*
 string reversed_str(string &str){
     stack<char> st;
     int n = str.length();
@@ -20,6 +21,9 @@ string reversed_str(string &str){
 
     return reversed_str;
 }
+*/
+
+
 
 int main(){
     string str = "Reverse a String";
