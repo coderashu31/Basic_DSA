@@ -24,6 +24,7 @@ string reversed_str(string &str){
 */
 
 // Solution 2: Using the two-pointer Approach
+/*
 string reversed_str(string &str){
     int i = 0;
     int j = str.length() - 1;
@@ -35,6 +36,15 @@ string reversed_str(string &str){
     }
     return str;
 }
+*/
+
+//using STL
+string reversed_str(string &str){
+    reverse(str.begin(),str.end());
+    return str;
+}
+
+
 
 int main(){
     string str = "Reverse a String";
